@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Heloiza Pereira · Tatuadora em Nova Odessa-SP</title>
+<meta name="description" content="Heloiza Pereira, tatuadora de realismo em preto e cinza em Nova Odessa-SP. Pets, retratos, animais e coberturas no Pixel Tattoo. Vamos eternizar a história de vocês.">
+<meta name="robots" content="noindex,nofollow">
+<meta property="og:title" content="Heloiza Pereira · Tatuadora">
+<meta property="og:description" content="Realismo em preto e cinza em Nova Odessa-SP. Da foto do seu pet para a pele.">
+<meta property="og:image" content="img/og.jpg">
+<meta name="theme-color" content="#efebe4">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/instrument-serif.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/hanken.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="img/h/amora-f.webp" as="image">
+<link rel="preload" href="img/h/amora-t.webp" as="image">
+<style>
+@font-face{font-family:Instrument;src:url(fonts/instrument-serif.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:Hanken;src:url(fonts/hanken.woff2) format("woff2");font-weight:100 900;font-display:swap}
+:root{--bg:#efebe4;--bg2:#e6e1d8;--ink:#1c1a18;--mut:#625b53;--cor:#c8901a;--cor-t:#8a5d08;--line:#d3ccc1;--esc:#1c1a18;--e:cubic-bezier(.16,.84,.32,1)}
+*{box-sizing:border-box;margin:0;padding:0}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.65 Hanken,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:url(img/grao.webp);opacity:.22;mix-blend-mode:multiply;pointer-events:none;z-index:-1}
+img,video{display:block;max-width:100%;height:auto;-webkit-user-drag:none;user-select:none}
+a{color:inherit}
+h2{font:400 clamp(2.6rem,5.2vw,4.4rem)/1.04 Instrument,Georgia,serif;letter-spacing:-.01em;text-align:center;text-wrap:balance;margin-bottom:18px}
+.lead{max-width:640px;margin:0 auto 48px;text-align:center;color:var(--mut);text-wrap:balance}
+.rot{display:block;text-align:center;font:700 12px/1 Hanken,sans-serif;letter-spacing:.3em;text-indent:.3em;text-transform:uppercase;color:var(--cor-t);margin-bottom:16px}
+section{padding:112px 24px}
+.wrap{max-width:1240px;margin:0 auto}
+.btn{display:inline-flex;align-items:center;justify-content:center;text-align:center;min-height:54px;padding:0 26px;font:700 14px/1.2 Hanken,sans-serif;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink);transition:background .3s var(--e),color .3s var(--e),border-color .3s var(--e),transform .3s var(--e);cursor:pointer}
+.btn:active{transform:scale(.97)}
+.btn.p{background:var(--ink);color:var(--bg)}
+.btn.p:hover{background:#000}
+.btn.s{background:transparent;color:var(--ink);border-color:#a89e91}
+.btn.s:hover{border-color:var(--ink)}
+.btns{display:grid;grid-template-columns:1fr 1fr;gap:12px;max-width:520px;margin:0 auto;width:100%}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+nav{position:absolute;top:0;left:0;right:0;z-index:6;display:flex;justify-content:space-between;align-items:center;padding:22px 34px}
+.logo{text-decoration:none;font:400 28px/1 Instrument,serif;letter-spacing:.01em;white-space:nowrap}
+nav ul{display:flex;gap:30px;list-style:none}
+nav ul a{text-decoration:none;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--mut);transition:color .3s var(--e)}
+nav ul a:hover{color:var(--ink)}
+
+/* HERO: a foto que o tutor mandou vira a tatuagem dela, pincelada a pincelada, num porta-retrato no eixo */
+.hero{--q:min(62svh,600px,46vw);position:relative;min-height:100svh;display:grid;grid-template-columns:1fr auto 1fr;grid-template-rows:1fr auto auto;align-items:center;column-gap:clamp(28px,4vw,64px);padding:84px 32px 40px;overflow:hidden;isolation:isolate}
+.lado{display:flex;flex-direction:column;gap:12px;opacity:0;transform:translateY(10px);transition:opacity 1s var(--e) .3s,transform 1s var(--e) .3s}
+.lado.l{align-items:flex-end;text-align:right}.lado.r{align-items:flex-start;text-align:left}
+.lado b{font:400 clamp(3.2rem,6.4vw,7.4rem)/.9 Instrument,serif;letter-spacing:-.015em}
+.lado span{font:700 12px/1.3 Hanken,sans-serif;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+.quadro{position:relative;width:calc(var(--q)*.8);padding:clamp(10px,1.4vw,18px);background:#f8f5ef;border:clamp(6px,.7vw,9px) solid var(--esc);box-shadow:0 0 0 1px rgba(0,0,0,.12),0 34px 60px -30px rgba(40,30,18,.55),0 10px 18px -12px rgba(40,30,18,.35);opacity:0;transition:opacity 1s var(--e)}
+.foto{position:relative;aspect-ratio:4/5;overflow:hidden;background:#d9d3c9;box-shadow:inset 0 0 0 1px rgba(0,0,0,.18)}
+.foto>*{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.f-poster,.f-video,.f-gl{opacity:0;transition:opacity .6s var(--e)}
+.foto.gl .f-gl,.foto.vd .f-video,.foto.est .f-poster{opacity:1}
+.placa{grid-column:2;display:flex;flex-direction:column;align-items:center;gap:10px;margin-top:20px;opacity:0;transition:opacity 1s var(--e) .5s}
+.pn{font:400 clamp(1.7rem,2.2vw,2.1rem)/1 Instrument,serif;transition:opacity .35s var(--e)}
+.etapa{display:flex;align-items:center;gap:12px;font:700 11px/1 Hanken,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#9a9086}
+.etapa i{font-style:normal;transition:color .3s var(--e)}
+.etapa i.on{color:var(--ink)}
+.linha{position:relative;width:64px;height:1.5px;background:var(--line);overflow:hidden}
+.linha::after{content:"";position:absolute;inset:0;background:var(--cor);transform-origin:left;transform:scaleX(var(--p,0))}
+.hero .btns{grid-column:1/-1;margin-top:26px;opacity:0;transform:translateY(10px);transition:opacity 1s var(--e) .7s,transform 1s var(--e) .7s}
+.hero.pronto .lado,.hero.pronto .btns{opacity:1;transform:none}
+.hero.pronto .quadro,.hero.pronto .placa{opacity:1}
+.hero h1{display:contents}
+.nome-m{display:none}
+@media (max-width:900px),(max-aspect-ratio:1/1){
+ .hero{--q:auto;display:flex;flex-direction:column;align-items:center;padding:70px 0 40px;min-height:0}
+ .lado{display:none}
+ .quadro{width:100%;max-width:640px;padding:0;border-width:0;border-block:6px solid var(--esc);box-shadow:0 26px 40px -30px rgba(40,30,18,.5)}
+ .nome-m{display:block;order:3;margin-top:22px;text-align:center;padding:0 16px}
+ .nome-m b{display:block;font:400 clamp(3rem,13.5vw,5rem)/.95 Instrument,serif;letter-spacing:-.015em}
+ .nome-m span span{display:block;margin:0;white-space:nowrap}.nome-m span .sep{display:none}
+ .nome-m span{display:block;margin-top:12px;font:700 11.5px/1.4 Hanken,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--mut)}
+ .placa{order:2;margin-top:16px}
+ .hero .btns{order:4;margin-top:24px;padding:0 16px}
+}
+@media (max-height:520px) and (orientation:landscape){
+ .hero{--q:min(74svh,600px);padding:62px 24px 20px;grid-template-rows:1fr auto}
+ .lado b{font-size:clamp(2.4rem,6vw,4rem)}
+ .placa{margin-top:8px}.pn{font-size:1.4rem}
+ .hero .btns{grid-column:auto;grid-row:auto;margin:0}
+}
+
+/* adornos: borboleta e peixe dos desenhos disponíveis dela, estáticos e apagados */
+section,.hero{position:relative;overflow:hidden}
+section>.wrap,section>.duo{position:relative;z-index:1}
+.orn{position:absolute;z-index:0;pointer-events:none;user-select:none;-webkit-user-drag:none;max-width:none;height:auto;opacity:var(--o,.09)}
+.orn.m{transform:scaleX(-1)}
+.orn-h{bottom:4%;width:clamp(150px,13vw,240px);--o:.1;-webkit-mask-image:linear-gradient(180deg,transparent,#000 25%,#000 70%,transparent);mask-image:linear-gradient(180deg,transparent,#000 25%,#000 70%,transparent)}
+.orn-h.l{left:3%}.orn-h.r{right:3%}
+.orn-c{left:50%;top:40px;width:min(420px,70vw);transform:translateX(-50%);--o:.06;-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 45%,transparent 85%);mask-image:linear-gradient(180deg,transparent,#000 20%,#000 45%,transparent 85%)}
+.orn-k{bottom:60px;width:clamp(170px,17vw,300px);--o:.09;-webkit-mask-image:linear-gradient(0deg,transparent,#000 22%,#000 65%,transparent);mask-image:linear-gradient(0deg,transparent,#000 22%,#000 65%,transparent)}
+.orn-k.l{left:1%}.orn-k.r{right:1%}
+.orn-t{top:70px;width:clamp(130px,12vw,220px);--o:.09;-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 60%,transparent);mask-image:linear-gradient(180deg,transparent,#000 20%,#000 60%,transparent)}
+.orn-t.l{left:2%}.orn-t.r{right:2%}
+
+/* da foto para a pele */
+.pares{display:grid;grid-template-columns:1fr 1fr;gap:clamp(22px,3vw,44px);max-width:1100px;margin:0 auto}
+.par{margin:0;cursor:zoom-in}
+.par .dupla{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:10px;background:#f8f5ef;border:5px solid var(--esc);box-shadow:0 0 0 1px rgba(0,0,0,.1),0 26px 44px -24px rgba(40,30,18,.5);transition:transform .3s var(--e)}
+.par:hover .dupla{transform:translateY(-3px)}
+.par .dupla span{position:relative;display:block}
+.par img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.par .dupla em{position:absolute;left:0;right:0;bottom:0;padding:22px 0 9px;text-align:center;font:700 10.5px/1 Hanken,sans-serif;font-style:normal;letter-spacing:.2em;text-transform:uppercase;color:#fff;background:linear-gradient(transparent,rgba(0,0,0,.55))}
+.par figcaption{margin-top:16px;text-align:center;font:400 1.7rem/1.1 Instrument,serif}
+.par figcaption span{display:block;margin-top:6px;font:400 15px/1.4 Hanken,sans-serif;color:var(--mut)}
+
+/* trabalhos */
+.escuro{background:#1c1a18;color:#efebe4}
+.escuro .lead{color:#a9a096}.escuro .rot{color:var(--cor)}
+.filt{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:34px}
+.filt button{background:none;border:1px solid #3d3833;color:#a9a096;font:700 12.5px/1 Hanken,sans-serif;letter-spacing:.1em;text-transform:uppercase;padding:13px 18px;cursor:pointer;transition:border-color .3s var(--e),color .3s var(--e),background .3s var(--e)}
+.filt button:hover{border-color:#6d655d;color:#efebe4}
+.filt button.on{border-color:var(--cor);background:var(--cor);color:#1c1a18}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.2vw,16px)}
+.grid a{position:relative;display:block;overflow:hidden;cursor:zoom-in;background:#000}
+.grid a span{display:block;aspect-ratio:4/5}
+.grid img{width:100%;height:100%;object-fit:cover;transition:transform .5s var(--e),opacity .3s var(--e)}
+.grid a:hover img{transform:scale(1.04)}
+.more{text-align:center;margin-top:34px}
+.escuro .btn.s{color:#efebe4;border-color:#5a534c}.escuro .btn.s:hover{border-color:#efebe4}
+
+/* telas a óleo */
+.telas{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.4vw,34px);max-width:1000px;margin:0 auto 40px}
+.telas figure{margin:0;cursor:zoom-in}
+.telas .fl{display:block;padding:10px;background:#f8f5ef;border:5px solid var(--esc);box-shadow:0 0 0 1px rgba(0,0,0,.1),0 26px 44px -24px rgba(40,30,18,.5);transition:transform .3s var(--e)}
+.telas figure:hover .fl{transform:translateY(-3px)}
+.telas img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.telas figcaption{margin-top:14px;text-align:center;font:400 1.45rem/1.1 Instrument,serif}
+.cta{text-align:center}.cta p{margin:0 auto 22px;max-width:460px;font-size:15px;color:var(--mut)}
+
+/* sobre / estúdio */
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;max-width:1100px;margin:0 auto}
+.duo .ph{padding:10px;background:#f8f5ef;border:5px solid var(--esc);box-shadow:0 26px 44px -24px rgba(40,30,18,.5)}
+.duo img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.duo .tx{text-align:center}
+.duo .tx h2{margin-bottom:22px}
+.duo .tx p{color:var(--mut);margin:0 auto 16px;max-width:470px}
+blockquote{margin:26px auto 28px;max-width:460px;font:400 clamp(1.6rem,2.3vw,2rem)/1.2 Instrument,serif;color:var(--ink);text-wrap:balance}
+blockquote cite{display:block;margin-top:12px;font:700 11px/1 Hanken,sans-serif;font-style:normal;letter-spacing:.24em;text-transform:uppercase;color:var(--cor-t)}
+.fatos{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);margin:28px 0}
+.fatos div{background:var(--bg);padding:20px 14px;text-align:center}
+.fatos b{display:block;font:400 1.6rem/1.05 Instrument,serif;color:var(--ink);margin-bottom:6px}
+.fatos span{font-size:14px;color:var(--mut);line-height:1.4;display:block}
+.est{background:var(--bg2)}
+.map{display:block;width:100%;height:340px;border:0;filter:grayscale(1) contrast(.95);margin-top:56px}
+
+/* pedido */
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);max-width:1100px;margin:0 auto 44px}
+.passos div{background:var(--bg);padding:32px 22px;text-align:center}
+.passos b{display:block;font:400 1.75rem/1.05 Instrument,serif;margin-bottom:10px;color:var(--ink)}
+.passos p{font-size:15px;color:var(--mut);line-height:1.5}
+.form{max-width:760px;margin:0 auto;display:grid;gap:24px;padding:clamp(22px,4vw,44px);border:1px solid var(--line);background:rgba(248,245,239,.9)}
+.campo{display:grid;gap:9px;border:0;min-width:0}
+.campo>span,.campo legend{font:700 12px/1 Hanken,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--cor-t);padding:0;margin:0 0 10px}
+.campo>span{margin:0}
+.form input:not([type=radio]),.form select,.form textarea{width:100%;font:400 17px/1.4 Hanken,sans-serif;color:var(--ink);background:transparent;border:0;border-bottom:1.5px solid #c4bcb0;padding:10px 0;outline:0;transition:border-color .3s var(--e)}
+.form select{appearance:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' fill='none' stroke='%238a5d08' stroke-width='1.6'/%3E%3C/svg%3E") right 4px center no-repeat;padding-right:26px}
+.form textarea{border:1.5px solid #c4bcb0;padding:12px;resize:vertical;min-height:110px}
+.form input:focus,.form select:focus,.form textarea:focus{border-color:var(--ink)}
+.form ::placeholder{color:#9a9086}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips label{cursor:pointer}
+.chips input{position:absolute;opacity:0;pointer-events:none}
+.chips span{display:inline-block;border:1px solid #c4bcb0;padding:11px 15px;font:700 12.5px/1 Hanken,sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);transition:all .3s var(--e)}
+.chips label:hover span{border-color:#8f857a;color:var(--ink)}
+.chips input:checked+span{border-color:var(--ink);background:var(--ink);color:var(--bg)}
+.chips input:focus-visible+span{outline:2px solid var(--cor);outline-offset:3px}
+.duas{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.erro{color:#a3311f;font-size:14px;text-align:center}
+.form .btn{width:100%}
+.form small{display:block;text-align:center;color:var(--mut);font-size:13px;line-height:1.5}
+
+footer{border-top:1px solid var(--line);padding:46px 24px;text-align:center;color:var(--mut);font-size:14px}
+footer .logo{display:inline-block;margin-bottom:14px;font-size:30px;color:var(--ink)}
+footer p+p{margin-top:6px}
+
+.lb{position:fixed;inset:0;background:rgba(18,16,14,.96);z-index:20;display:flex;align-items:center;justify-content:center;padding:24px 24px 90px}
+.lb img{max-height:80svh;max-width:min(92vw,900px);object-fit:contain}
+.lb button{position:absolute;background:rgba(28,26,24,.7);border:1px solid #3d3833;color:#efebe4;width:52px;height:52px;font-size:22px;cursor:pointer;transition:border-color .3s var(--e)}
+.lb button:hover{border-color:#efebe4}
+.lb .x{top:18px;right:18px}.lb .pv{left:18px;top:50%}.lb .nx{right:18px;top:50%}
+.lb .quero{bottom:22px;left:50%;transform:translateX(-50%);width:auto;height:auto;font-size:13px;padding:0 24px;min-height:52px;background:var(--cor);color:#1c1a18;border-color:var(--cor)}
+.lb .quero:hover{background:#dba12a;border-color:#dba12a}
+.lb-leg{position:absolute;top:30px;left:50%;transform:translateX(-50%);font:400 24px/1.1 Instrument,serif;color:#efebe4;text-align:center;width:min(70vw,600px)}
+
+.rv{opacity:0;transform:translateY(16px);transition:opacity .7s var(--e),transform .7s var(--e)}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1000px){
+ .grid{grid-template-columns:repeat(3,1fr)}
+ .passos{grid-template-columns:1fr 1fr}
+}
+@media(max-width:820px){
+ nav{padding:18px 20px;justify-content:center}
+ nav ul{display:none}
+ .logo{font-size:26px}
+ .btn{padding:0 12px;font-size:12.5px;letter-spacing:.08em}
+ section{padding:84px 16px}
+ .pares{grid-template-columns:1fr;max-width:520px}
+ .grid{grid-template-columns:1fr 1fr;gap:8px}
+ .filt{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:420px;margin-left:auto;margin-right:auto}.filt button{padding:13px 4px;font-size:11.5px;letter-spacing:.08em}.filt button:first-child{grid-column:1/-1}
+ .telas{grid-template-columns:1fr 1fr;gap:16px 12px}
+ .telas figure:last-child{grid-column:1/-1;width:calc(50% - 6px);justify-self:center}
+ .telas .fl,.par .dupla{padding:6px;border-width:3px}
+ .telas figcaption{font-size:1.2rem}
+ .duo{grid-template-columns:1fr;gap:36px}
+ .duo .ph{max-width:440px;margin:0 auto;width:100%}
+ .est .duo .ph{order:2}
+ .passos div{padding:24px 14px}.passos b{font-size:1.45rem}.passos p{font-size:14px}
+ .map{height:280px}
+ .duas{grid-template-columns:1fr;gap:22px}
+ .chips span{padding:10px 12px;font-size:12px}
+ .orn{--o:.06!important}
+ .orn-k{width:120px}.orn-t{width:100px}.orn-h{display:none}
+ .lb .pv,.lb .nx{top:auto;bottom:22px;width:48px;height:52px}
+ .lb .quero{font-size:12px;padding:0 14px}
+}
+@media(max-width:380px){.btns{grid-template-columns:1fr}.filt button{font-size:10.5px}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}.lado,.quadro,.placa,.hero .btns{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav>
+ <a class="logo" href="#inicio" aria-label="Heloiza Pereira, início">Heloiza Pereira</a>
+ <ul><li><a href="#pele">Da foto à pele</a></li><li><a href="#trabalhos">Trabalhos</a></li><li><a href="#sobre">Sobre</a></li><li><a href="#estudio">Estúdio</a></li><li><a href="#marcar">Orçamento</a></li></ul>
+</nav>
+
+<header class="hero" id="inicio">
+ <img class="orn orn-h l" src="img/orn/borboleta.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-h r m" src="img/orn/borboleta.webp" alt="" aria-hidden="true" draggable="false">
+ <h1>
+  <span class="lado l" aria-hidden="true"><b>Heloiza</b><span>Realismo em preto e cinza</span></span>
+  <span class="sr">Heloiza Pereira, tatuadora de realismo em Nova Odessa-SP</span>
+ </h1>
+ <div class="quadro">
+  <div class="foto" id="foto" role="img" aria-label="A foto de um pet enviada pelo tutor se transforma, pincelada a pincelada, na tatuagem que a Heloiza fez">
+   <img class="f-poster" src="video/foto.jpg" alt="" width="864" height="1080">
+   <video class="f-video" muted playsinline loop preload="none" aria-hidden="true"></video>
+   <canvas class="f-gl" aria-hidden="true"></canvas>
+  </div>
+ </div>
+ <span class="lado r" aria-hidden="true"><b>Pereira</b><span>Nova Odessa · SP</span></span>
+ <div class="placa" aria-hidden="true"><span class="pn" id="pn">Amora</span><span class="etapa"><i id="e1" class="on">Foto do tutor</i><span class="linha" id="ln"></span><i id="e2">Na pele</i></span></div>
+ <p class="nome-m" aria-hidden="true"><b>Heloiza Pereira</b><span><span>Realismo em preto e cinza</span><span class="sep"> · </span><span>Nova Odessa-SP</span></span></p>
+ <div class="btns"><a class="btn p" href="#marcar">Pedir orçamento</a><a class="btn s" href="#trabalhos">Ver trabalhos</a></div>
+</header>
+
+<section id="pele">
+ <img class="orn orn-c" src="img/orn/peixe.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="wrap">
+  <span class="rot rv">Da foto à pele</span>
+  <h2 class="rv">Vamos eternizar a história de vocês</h2>
+  <p class="lead rv">Você manda a foto, a Heloiza desenha a partir dela e leva cada pelo e cada brilho do olhar para a pele. Abaixo, a foto que o tutor mandou ao lado da tatuagem pronta.</p>
+  <div class="pares rv" id="pares">
+   <figure class="par" data-k="amora"><div class="dupla"><span><img src="img/p/amora-f.webp" alt="Foto da Amora enviada pela tutora" width="720" height="900"><em>Foto</em></span><span><img src="img/p/amora-t.webp" alt="Tatuagem da Amora em realismo preto e cinza" width="720" height="900"><em>Pele</em></span></div><figcaption>Amora<span>“A doguinha simpática (mas que morde cabeças)”</span></figcaption></figure>
+   <figure class="par" data-k="collie"><div class="dupla"><span><img src="img/p/collie-f.webp" alt="Foto do border collie enviada pelo tutor" width="720" height="900"><em>Foto</em></span><span><img src="img/p/collie-t.webp" alt="Tatuagem do border collie no peito, em realismo colorido" width="720" height="900"><em>Pele</em></span></div><figcaption>Border collie<span>No peito, para o Luis</span></figcaption></figure>
+   <figure class="par" data-k="gamora"><div class="dupla"><span><img src="img/p/gamora-f.webp" alt="Foto da gata Gamora" width="720" height="900"><em>Foto</em></span><span><img src="img/p/gamora-t.webp" alt="Tatuagem colorida da gata Gamora com o nome" width="720" height="900"><em>Pele</em></span></div><figcaption>Gamora<span>Gata tricolor, com coleira e nome</span></figcaption></figure>
+   <figure class="par" data-k="fred"><div class="dupla"><span><img src="img/p/fred-f.webp" alt="Foto do pug Frederico" width="720" height="900"><em>Foto</em></span><span><img src="img/p/fred-t.webp" alt="Tatuagem do pug Frederico em preto e cinza" width="720" height="900"><em>Pele</em></span></div><figcaption>Frederico<span>“O cachorrinho simpático e engraçado”</span></figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="escuro" id="trabalhos">
+ <div class="wrap">
+  <span class="rot rv">Portfólio</span>
+  <h2 class="rv">Realismo que dura</h2>
+  <p class="lead rv">Pets, retratos de quem você ama, animais e personagens, quase tudo em preto e cinza. Cada desenho nasce da sua foto e da sua história.</p>
+  <div class="filt rv" id="filt">
+   <button class="on" data-f="*">Todos</button><button data-f="pe">Pets</button><button data-f="rt">Retratos</button><button data-f="an">Animais</button><button data-f="pg">Personagens</button>
+  </div>
+  <div class="grid" id="grid"></div>
+  <div class="more"><button class="btn s" id="mais">Ver mais trabalhos</button></div>
+ </div>
+</section>
+
+<section id="telas">
+ <img class="orn orn-t l" src="img/orn/borboleta.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-t r m" src="img/orn/borboleta.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="wrap">
+  <span class="rot rv">Telas a óleo</span>
+  <h2 class="rv">Também na parede</h2>
+  <p class="lead rv">Além da pele, a Heloiza pinta retratos a óleo. Um momento, o seu pet ou uma pessoa querida, numa tela feita por encomenda.</p>
+  <div class="telas rv" id="tl">
+   <figure data-g="img/o/013.webp"><span class="fl"><img src="img/o/013.webp" alt="Retrato a óleo de um golden retriever" width="960" height="1200"></span><figcaption>Golden, a óleo</figcaption></figure>
+   <figure data-g="img/o/072.webp"><span class="fl"><img src="img/o/072.webp" alt="Retrato a óleo de um gato rajado de olhos verdes" width="960" height="1200"></span><figcaption>Gato rajado</figcaption></figure>
+   <figure data-g="img/o/073.webp"><span class="fl"><img src="img/o/073.webp" alt="Heloiza segurando a tela do gato rajado" width="960" height="1200"></span><figcaption>Pronta para entregar</figcaption></figure>
+  </div>
+  <div class="cta rv"><p>Conte quem você quer na tela e o tamanho. O orçamento vem pelo WhatsApp.</p><a class="btn p" href="#marcar" data-tela>Quero uma tela</a></div>
+ </div>
+</section>
+
+<section id="sobre">
+ <img class="orn orn-k l" src="img/orn/peixe.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k r m" src="img/orn/peixe.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="duo">
+  <div class="ph rv"><img src="img/heloiza.webp" alt="Heloiza Pereira tatuando no estúdio" width="960" height="1200"></div>
+  <div class="tx rv">
+   <span class="rot">Sobre</span>
+   <h2>Heloiza Pereira</h2>
+   <p>Desenha desde criança e estudou desenho e realismo antes de entrar na tatuagem. Hoje é referência em realismo na região e segue estudando para levar as melhores técnicas para a pele.</p>
+   <p>Antes da sessão, conversa com calma, cria a arte a partir das suas fotos e tira todas as dúvidas.</p>
+   <blockquote>“Top 1 tattoos que eu amo: pets.”<cite>Heloiza Pereira</cite></blockquote>
+   <div class="fatos"><div><b>Pets</b><span>Cães e gatos com o olhar de cada um</span></div><div><b>Retratos</b><span>Homenagens a quem você ama</span></div><div><b>Animais</b><span>Leões, tigres, onças e lobos</span></div><div><b>Coberturas</b><span>A tattoo antiga vira um projeto novo</span></div></div>
+   <a class="btn s" href="https://www.instagram.com/heloizaprtattoo/" target="_blank" rel="noopener">@heloizaprtattoo</a>
+  </div>
+ </div>
+</section>
+
+<section class="est" id="estudio">
+ <img class="orn orn-t l" src="img/orn/peixe.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-t r m" src="img/orn/peixe.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="duo">
+  <div class="tx rv">
+   <span class="rot">Estúdio</span>
+   <h2>Pixel Tattoo</h2>
+   <p>O estúdio próprio da Heloiza em Nova Odessa-SP, dividido com a tatuadora Renata Louzada. Atendimento com horário marcado.</p>
+   <p>No Pixel também tem remoção a laser, para clarear uma tattoo antiga antes da cobertura.</p>
+   <div class="btns" style="margin-top:28px"><a class="btn p" href="https://wa.me/5519994090680" target="_blank" rel="noopener">WhatsApp</a><a class="btn s" href="https://www.instagram.com/pixeltattooestudio/" target="_blank" rel="noopener">@pixeltattooestudio</a></div>
+  </div>
+  <div class="ph rv"><img src="img/estudio.webp" alt="Heloiza durante uma sessão no Pixel Tattoo" width="960" height="1200"></div>
+ </div>
+ <div class="wrap"><iframe class="map" title="Mapa de Nova Odessa-SP" src="https://maps.google.com/maps?q=Pixel%20Tattoo%20Nova%20Odessa%20SP&amp;z=14&amp;output=embed"></iframe></div>
+</section>
+
+<section id="marcar">
+ <img class="orn orn-k l" src="img/orn/borboleta.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k r m" src="img/orn/borboleta.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="wrap">
+  <span class="rot rv">Orçamento</span>
+  <h2 class="rv">Pedir orçamento</h2>
+  <p class="lead rv">Preencha e o pedido chega pronto no WhatsApp da Heloiza. Depois é só mandar as fotos de referência.</p>
+  <div class="passos rv">
+   <div><b>Ideia</b><p>Conte o que quer, o local do corpo e o tamanho.</p></div>
+   <div><b>Fotos</b><p>Mande as fotos do pet ou da pessoa, com boa luz.</p></div>
+   <div><b>Desenho</b><p>A arte é criada a partir das suas fotos.</p></div>
+   <div><b>Sessão</b><p>Data marcada direto com a Heloiza.</p></div>
+  </div>
+  <form class="form rv" id="form" novalidate>
+   <label class="campo"><span>Seu nome</span><input name="nome" autocomplete="given-name" required></label>
+   <fieldset class="campo"><legend>Tema</legend>
+    <div class="chips">
+     <label><input type="radio" name="tema" value="Pet" checked><span>Pet</span></label>
+     <label><input type="radio" name="tema" value="Retrato de pessoa"><span>Retrato</span></label>
+     <label><input type="radio" name="tema" value="Animal"><span>Animal</span></label>
+     <label><input type="radio" name="tema" value="Personagem"><span>Personagem</span></label>
+     <label><input type="radio" name="tema" value="Tela a óleo"><span>Tela a óleo</span></label>
+     <label><input type="radio" name="tema" value="Ainda não sei"><span>Ainda não sei</span></label>
+    </div>
+   </fieldset>
+   <fieldset class="campo"><legend>É cobertura?</legend>
+    <div class="chips">
+     <label><input type="radio" name="cob" value="Não" checked><span>Não</span></label>
+     <label><input type="radio" name="cob" value="Sim"><span>Sim</span></label>
+    </div>
+   </fieldset>
+   <div class="duas">
+    <label class="campo"><span>Local do corpo</span><input name="local" placeholder="Ex.: antebraço direito"></label>
+    <label class="campo"><span>Tamanho</span>
+     <select name="tamanho"><option>Até 10 cm</option><option selected>Médio (10 a 20 cm)</option><option>Grande (mais de 20 cm)</option><option>Fechamento</option></select></label>
+   </div>
+   <label class="campo"><span>Conte a sua ideia</span><textarea name="ideia" id="ideia" rows="4" placeholder="Quem você quer eternizar, a história por trás, se é a primeira tattoo..."></textarea></label>
+   <label class="campo"><span>Disponibilidade</span>
+    <select name="quando"><option>Indiferente</option><option>Dias de semana</option><option>Sábados</option></select></label>
+   <p class="erro" id="erro" hidden>Escreva o seu nome para continuar.</p>
+   <button class="btn p" type="submit">Enviar pelo WhatsApp</button>
+   <small>O WhatsApp abre com a mensagem pronta. É só enviar e anexar as fotos.</small>
+  </form>
+ </div>
+</section>
+
+<footer>
+ <a class="logo" href="#inicio">Heloiza Pereira</a>
+ <p>Tatuadora · Pixel Tattoo, Nova Odessa-SP</p>
+ <p>Site por <a href="https://lrgz.com.br">L R G Z</a></p>
+</footer>
+
+<div class="lb" id="lb" hidden><p class="lb-leg" id="lbl"></p><button class="x" aria-label="Fechar">×</button><button class="pv" aria-label="Anterior">‹</button><img id="lbi" alt=""><button class="nx" aria-label="Próxima">›</button><button class="btn quero" id="quero">Quero uma assim</button></div>
+
+<script src="js/obras.js"></script>
+<script src="js/foto.js"></script>
+<script>
+const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
+// HERO: WebGL no PC; MP4 no celular em pé; pôster se nada rodar
+(function(){const hero=document.getElementById('inicio'),foto=document.getElementById('foto'),cv=foto.querySelector('.f-gl'),v=foto.querySelector('.f-video');
+ const pn=document.getElementById('pn'),e1=document.getElementById('e1'),e2=document.getElementById('e2'),ln=document.getElementById('ln');
+ const est=()=>foto.classList.add('est');let ult=-1;
+ function placa(k,p){if(k!==ult){ult=k;pn.style.opacity=0;setTimeout(()=>{pn.textContent=HELO.PETS[k].nome;pn.style.opacity=1},200)}
+  ln.style.setProperty('--p',Math.min(1,p).toFixed(3));const na=p>.55;e1.classList.toggle('on',!na);e2.classList.toggle('on',na)}
+ const celPe=()=>innerWidth<=900&&innerHeight>innerWidth;
+ function iniciaGL(){if(!window.fotoHero)return false;const imgs={};let falta=0,falhou=false;
+  HELO.PETS.forEach(p=>{imgs[p.id]={};['f','t','m'].forEach(s=>{falta++;const im=new Image();im.src='img/h/'+p.id+'-'+s+(s=='m'?'.png':'.webp');imgs[p.id][s]=im;
+   im.onload=()=>{if(--falta===0&&!falhou)vai()};im.onerror=()=>{if(!falhou){falhou=true;iniciaVideo()}}})});
+  function vai(){let G=null;try{G=fotoHero(cv,imgs)}catch(e){G=null}if(!G){iniciaVideo();return}
+   foto.classList.add('gl');let t0=0,vis=true,raf=0,pausa=0,tp=0;
+   const q=ts=>{if(!t0)t0=ts;if(pausa){t0+=ts-pausa;pausa=0}const e=G.desenha((ts-t0)/1000,Math.min(2,devicePixelRatio||1));placa(e.k,e.p);tp=ts;raf=vis?requestAnimationFrame(q):0};
+   new IntersectionObserver(es=>{vis=es[0].isIntersecting;if(!vis)pausa=tp;if(vis&&!raf)raf=requestAnimationFrame(q)}).observe(foto);
+   raf=requestAnimationFrame(q)}
+  return true}
+ function iniciaVideo(){if(v.src)return;v.src='video/foto.mp4';v.preload='auto';const p=v.play();
+  if(p&&p.catch)p.catch(est);
+  v.addEventListener('playing',()=>foto.classList.add('vd'),{once:true});v.addEventListener('error',est);
+  const C=HELO.CICLO,n=HELO.PETS.length;
+  const tick=()=>{if(!v.paused){const g=v.currentTime,k=Math.floor(g/C)%n,l=g-Math.floor(g/C)*C;placa(k,Math.max(0,Math.min(1,(l-.75)/1.7)))}requestAnimationFrame(tick)};tick();
+  document.addEventListener('visibilitychange',()=>{if(!document.hidden&&foto.classList.contains('vd'))v.play().catch(()=>{})})}
+ if(RM){est();placa(0,1)}else if(celPe())iniciaVideo();else if(!iniciaGL())iniciaVideo();
+ requestAnimationFrame(()=>hero.classList.add('pronto'));
+})();
+
+// trabalhos
+const O=window.OBRAS;const g=document.getElementById('grid');let f='*',lim=24,vis=[];
+function draw(){vis=O.filter(o=>f=='*'||o[1]==f);g.innerHTML=vis.slice(0,lim).map((o,k)=>`<a href="img/g/${o[0]}.webp" data-k="${k}"><span><img src="img/t/${o[0]}.webp" alt="${o[2]}, tatuagem de Heloiza Pereira" width="600" height="750"></span></a>`).join('');document.getElementById('mais').parentNode.hidden=vis.length<=lim}
+draw();
+document.getElementById('filt').onclick=e=>{const b=e.target.closest('button');if(!b)return;document.querySelectorAll('#filt button').forEach(x=>x.classList.toggle('on',x==b));f=b.dataset.f;lim=24;draw()};
+document.getElementById('mais').onclick=()=>{lim=999;draw()};
+// lightbox
+const lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbl=document.getElementById('lbl');let li=0,lista=[];
+const show=k=>{li=(k+lista.length)%lista.length;lbi.src=lista[li].src;lbi.alt=lista[li].t;lbl.textContent=lista[li].t;lb.hidden=false};
+g.onclick=e=>{const a=e.target.closest('a');if(!a)return;e.preventDefault();lista=vis.map(o=>({src:`img/g/${o[0]}.webp`,t:o[2]}));show(+a.dataset.k)};
+const pf=[...document.querySelectorAll('#pares .par')];
+pf.forEach((fg,k)=>fg.addEventListener('click',()=>{lista=[];pf.forEach(x=>{const n=x.querySelector('figcaption').firstChild.textContent;lista.push({src:'img/h/'+x.dataset.k+'-f.webp',t:n+': a foto'},{src:'img/h/'+x.dataset.k+'-t.webp',t:n+': na pele'})});show(k*2+1)}));
+const tf=[...document.querySelectorAll('#tl figure')];
+tf.forEach((fg,k)=>fg.addEventListener('click',()=>{lista=tf.map(x=>({src:x.dataset.g,t:'Tela: '+x.querySelector('figcaption').textContent}));show(k)}));
+lb.onclick=e=>{if(e.target.classList.contains('pv'))show(li-1);else if(e.target.classList.contains('nx'))show(li+1);else if(e.target!==lbi&&e.target.id!=='quero')lb.hidden=true};
+addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key=='Escape')lb.hidden=true;if(e.key=='ArrowLeft')show(li-1);if(e.key=='ArrowRight')show(li+1)});
+const marca=v=>{const r=document.querySelector('input[name=tema][value="'+v+'"]');if(r)r.checked=true};
+document.getElementById('quero').addEventListener('click',e=>{e.stopPropagation();lb.hidden=true;const id=document.getElementById('ideia');const t=lista[li].t;
+ if(t.startsWith('Tela: ')){marca('Tela a óleo');id.value='Vi no site a tela "'+t.slice(6)+'" e quero uma assim. '}else{const o=O.find(x=>x[2]===t);if(o)marca({pe:'Pet',rt:'Retrato de pessoa',an:'Animal',pg:'Personagem'}[o[1]]);else marca('Pet');id.value='Vi no site o trabalho "'+t+'" e quero algo nessa linha. '}
+ document.getElementById('form').scrollIntoView({behavior:'smooth',block:'start'});setTimeout(()=>id.focus({preventScroll:true}),700)});
+document.querySelector('[data-tela]').addEventListener('click',()=>marca('Tela a óleo'));
+
+// pedido -> WhatsApp
+const WA='5519994090680';
+const form=document.getElementById('form'),erro=document.getElementById('erro');
+form.addEventListener('submit',e=>{e.preventDefault();const d=new FormData(form),nome=(d.get('nome')||'').trim();
+ if(!nome){erro.hidden=false;form.nome.focus();return}erro.hidden=true;
+ const l=['Olá, Heloiza! Sou *'+nome+'* e quero um orçamento.','','*Tema:* '+d.get('tema'),'*Cobertura:* '+d.get('cob'),'*Local do corpo:* '+((d.get('local')||'').trim()||'a definir'),'*Tamanho:* '+d.get('tamanho'),'*Disponibilidade:* '+d.get('quando')];
+ const ideia=(d.get('ideia')||'').trim();if(ideia)l.push('','*Ideia:* '+ideia);l.push('','(pedido enviado pelo site)');
+ window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(l.join('\n')),'_blank','noopener')});
+
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
